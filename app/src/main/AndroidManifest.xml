@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlayMusic">
         <activity
-            android:name=".MainActivity"
+            android:name="Fragment.FragmentActivity"
+            android:exported="true" />
+        <activity
+            android:name="Fragment.NullActivityActivity"
+            android:exported="true" />
+        <activity
+            android:name="Activity.MainActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+        <activity
+            android:name="Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
