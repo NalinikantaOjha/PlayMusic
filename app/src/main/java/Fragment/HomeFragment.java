@@ -1,5 +1,16 @@
 package Fragment;
 
+import static android.content.Context.BIND_AUTO_CREATE;
+import android.content.Intent;
+import android.util.Log;
+
+import com.example.playmusic.MusicService;
+import android.app.Service;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.media.MediaPlayer;
+import android.os.Binder;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,21 +19,34 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.IBinder;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.playmusic.MusicService;
 import com.example.playmusic.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import Interface.ApiCall;
+import Interface.Network;
 import Interface.onChildClicked;
 import Model.ChildItem;
 import Model.ParentItem;
+import Model.ResponseDTO;
+import Model.ResultsDTO;
 import ViewHolder.ChildViewHolder;
 import ViewHolder.ParentViewHolder;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class HomeFragment extends Fragment implements onChildClicked {
@@ -32,10 +56,12 @@ public class HomeFragment extends Fragment implements onChildClicked {
     RecyclerView ParentRecyclerViewItem;
     RecyclerView.LayoutManager manager;
     List<ParentItem>itemList=new ArrayList<>();
+    List<ResultsDTO>list=new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
@@ -46,6 +72,21 @@ public class HomeFragment extends Fragment implements onChildClicked {
         manager=new LinearLayoutManager(getContext());
         ParentRecyclerViewItem=view.findViewById(R.id.parent_recyclerview);
         ParentRecyclerViewItem.setLayoutManager(manager);
+        play=view.findViewById(R.id.btnPlay);
+        pause=view.findViewById(R.id.btnPause);
+        ApiCall();
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicService.onPlay();
+            }
+        });
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicService.onPause();
+            }
+        });
 
         adapter=new RecyclerView.Adapter<ParentViewHolder>() {
             @NonNull
@@ -69,13 +110,13 @@ public class HomeFragment extends Fragment implements onChildClicked {
                     @Override
                     public void onBindViewHolder(@NonNull ChildViewHolder holder, int position) {
 
-                        ChildItem childItem = ChildBuildData().get(position);
-                        holder.setData(childItem);
+                        ResultsDTO resultsDTO = list.get(position);
+                        holder.setData(resultsDTO);
                     }
 
                     @Override
                     public int getItemCount() {
-                        return ChildBuildData().size();
+                        return list.size();
                     }
                 };
                 adapter2.notifyDataSetChanged();
@@ -99,27 +140,72 @@ public class HomeFragment extends Fragment implements onChildClicked {
     }
 
     private void ParentBuildData() {
-        ParentItem item = new ParentItem("Mostly Played", ChildBuildData());itemList.add(item);
-        ParentItem item1 = new ParentItem("Your Audios", ChildBuildData());itemList.add(item1);
-        ParentItem item2 = new ParentItem("Folders",  ChildBuildData());itemList.add(item2);
-        ParentItem item3 = new ParentItem("Recently Added",  ChildBuildData());itemList.add(item3);
-        ParentItem item4 = new ParentItem("Album",  ChildBuildData());itemList.add(item4);
-        ParentItem item5 = new ParentItem("Artist",  ChildBuildData());itemList.add(item5);
+        ParentItem item = new ParentItem("Mostly Played", list);itemList.add(item);
+       ParentItem item1 = new ParentItem("Your Audios", list);itemList.add(item1);
+        ParentItem item2 = new ParentItem("Folders",  list);itemList.add(item2);
+       ParentItem item3 = new ParentItem("Recently Added",  list);itemList.add(item3);
+       ParentItem item4 = new ParentItem("Album",  list);itemList.add(item4);
+       ParentItem item5 = new ParentItem("Artist",  list);itemList.add(item5);
+
+    }
+    private void ApiCall(){
+        ApiCall apiCall= Network.getInstance().create(ApiCall.class);
+     apiCall.getPosts("shapeofyou").enqueue(new Callback<ResponseDTO>() {
+         @Override
+         public void onResponse(Call<ResponseDTO> call, Response<ResponseDTO> response) {
+             list=response.body().getResults();
+             adapter2.notifyDataSetChanged();
+             adapter.notifyDataSetChanged();
+         }
+
+         @Override
+         public void onFailure(Call<ResponseDTO> call, Throwable t) {
+
+         }
+     });
 
     }
 
-    private List<ChildItem> ChildBuildData() {
-        List<ChildItem> ChildItemList = new ArrayList<>();
-        ChildItemList.add(new ChildItem("Free Fire"));
-        ChildItemList.add(new ChildItem("PUBG"));
-        ChildItemList.add(new ChildItem("DR.Driver"));
-        ChildItemList.add(new ChildItem("Temple Run"));
-        return ChildItemList;
-    }
+//    private List<ChildItem> ChildBuildData() {
+//        List<ChildItem> ChildItemList = new ArrayList<>();
+//        ChildItemList.add(new ChildItem("Free Fire"));
+//        ChildItemList.add(new ChildItem("PUBG"));
+//        ChildItemList.add(new ChildItem("DR.Driver"));
+//        ChildItemList.add(new ChildItem("Temple Run"));
+//        return ChildItemList;
+//    }
+
 
     @Override
-    public void onChildClicked(ChildItem childItem, int position) {
-        Toast.makeText(getContext(),"pos"+childItem.getChildItemTitle(),Toast.LENGTH_LONG).show();
+    public void onChildClicked(ResultsDTO resultsDTO, int position) {
+        Intent intent=new Intent(getContext(),MusicService.class);
+        //intent.putExtra("nalini",resultsDTO.get)
+StartService();
+    }
+    ImageView imageView;
+    Button play,start,pause,Stop;
+    int id;
+    TextView textView;
+    private MusicService musicService;
+    private ServiceConnection serviceConnection=new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            MusicService.ServiceBinder serviceBinder=(MusicService.ServiceBinder)service;
+            musicService=serviceBinder.getMusicService();
+
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+
+        }
+    };
+
+    private void StartService(){
+        Intent intent =new Intent(getContext(), MusicService.class);
+        Log.d("nalini",id+"");
+        intent.putExtra("nalini",id);
+      // bindService(intent,serviceConnection,BIND_AUTO_CREATE);
+    }
 
     }
-}

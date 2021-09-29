@@ -7,17 +7,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.playmusic.R;
 
 import Interface.onChildClicked;
 import Model.ChildItem;
+import Model.ResultsDTO;
 
 
 public class ChildViewHolder extends RecyclerView.ViewHolder {
     TextView ChildItemTitle;
     ImageView imageView;
 
-   public Interface.onChildClicked onChildClicked;
+    onChildClicked onChildClicked;
 
     public ChildViewHolder(@NonNull View itemView, onChildClicked onChildClicked) {
         super(itemView);
@@ -26,9 +28,12 @@ public class ChildViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void setData(ChildItem childItem) {
-        ChildItemTitle.setText(childItem.getChildItemTitle());
-        imageView.setOnClickListener(v -> onChildClicked.onChildClicked(childItem,getAdapterPosition()));
+    public void setData(ResultsDTO resultsDTO) {
+        ChildItemTitle.setText(resultsDTO.getTrackName());
+        Glide.with(imageView).load((resultsDTO).getPreviewUrl())
+                .placeholder(R.drawable.folderimage)
+                .into(imageView);
+        imageView.setOnClickListener(v -> onChildClicked.onChildClicked(resultsDTO,getAdapterPosition()));
 
 
 

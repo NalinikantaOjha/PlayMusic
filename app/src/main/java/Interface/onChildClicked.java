@@ -1,7 +1,8 @@
 package Interface;
 
 import Model.ChildItem;
+import Model.ResultsDTO;
 
 public interface onChildClicked {
-    void onChildClicked(ChildItem childItem, int position);
+    void onChildClicked(ResultsDTO resultsDTO, int position);
 }

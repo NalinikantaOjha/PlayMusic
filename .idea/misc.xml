@@ -3,20 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_brightness_low_24.xml" value="0.1787037037037037" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_fragment.xml" value="0.15715579710144928" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_hpme.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_main2.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_main3.xml" value="0.17300724637681159" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/child_item.xml" value="0.1" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_home.xml" value="0.15715579710144928" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_home2.xml" value="0.15715579710144928" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_videos.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/home_item.xml" value="0.15715579710144928" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/parent_item.xml" value="0.1" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/menu/menu_navigationtop.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/menu/navigation_manu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_player.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/custom_controller.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_folder_in_video.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_folders_in_f_videoragment.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_videos_in_video.xml" value="0.1" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_kotlin_video.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_video.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/child_item.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_a.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_home.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_videos.xml" value="0.16847826086956522" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/item_layout.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/parent_item.xml" value="0.12360688956433637" />
       </map>
     </option>
   </component>

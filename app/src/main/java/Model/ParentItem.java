@@ -7,12 +7,12 @@ public class ParentItem {
 
 
     private String ParentItemTitle;
-    private List<ChildItem> ChildItemList;
+    private List<ResultsDTO> ChildItemList;
 
 
     public ParentItem(
             String ParentItemTitle,
-            List<ChildItem> ChildItemList)
+            List<ResultsDTO> ChildItemList)
     {
 
         this.ParentItemTitle = ParentItemTitle;
@@ -27,7 +27,7 @@ public class ParentItem {
 
 
 
-    public List<ChildItem> getChildItemList()
+    public List<ResultsDTO> getChildItemList()
     {
         return ChildItemList;
     }

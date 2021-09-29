@@ -41,6 +41,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnPlay"
+                    android:layout_width="wrap_content"
+                    android:background="@color/teal_700"
+                    android:layout_height="wrap_content">
+
+                </Button>
+                <Button
+                    android:layout_margin="20dp"
+                    android:id="@+id/btnPause"
+                    android:layout_width="wrap_content"
+                    android:background="@color/teal_700"
+                    android:layout_height="wrap_content">
+
+                </Button>
+
+            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
