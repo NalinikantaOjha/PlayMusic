@@ -13,10 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PlayMusic">
-        <activity android:name=".HomeActivity"
-            android:exported="true"/>
-        <activity android:name=".PlayerActivity"
-            android:exported="true"/>
 
         <activity
             android:name="Activity.VideoActivity"
@@ -30,15 +26,13 @@
         <activity
             android:name="Fragment.FragmentActivity"
             android:exported="true" />
-        <activity
-            android:name="Fragment.NullActivityActivity"
-            android:exported="true" />
+
         <activity
             android:name="Activity.MainActivity3"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
-            android:exported="true" />
+            android:name=".MainActivity"
+            android:exported="true"/>
         <activity
             android:name="Activity.MainActivity"
             android:exported="true">
