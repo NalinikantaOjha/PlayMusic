@@ -2,6 +2,7 @@ package Fragment;
 
 import static android.content.Context.BIND_AUTO_CREATE;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.util.Log;
 
 import com.example.playmusic.MusicService;
@@ -32,6 +33,7 @@ import android.widget.Toast;
 import com.example.playmusic.MusicService;
 import com.example.playmusic.R;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,6 +86,7 @@ public class HomeFragment extends Fragment implements onChildClicked {
         ApiCall();
 
 
+
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,6 +97,8 @@ public class HomeFragment extends Fragment implements onChildClicked {
             @Override
             public void onClick(View v) {
                 musicService.onPause();
+              getContext().stopService(intent);
+
             }
         });
 
@@ -197,7 +202,7 @@ public class HomeFragment extends Fragment implements onChildClicked {
     private void ParentBuildData() {
         ParentItem item = new ParentItem("Mostly Played",list2,null,null);itemList.add(item);
      ParentItem item1 = new ParentItem("Your Audios",list2, null,null);itemList.add(item1);
-        ParentItem item2 = new ParentItem("Folders",null,list,  null);itemList.add(item2);
+      //  ParentItem item2 = new ParentItem("Folders",null,list,  null);itemList.add(item2);
 //       ParentItem item3 = new ParentItem("Recently Added",  list);itemList.add(item3);
 //       ParentItem item4 = new ParentItem("Album",  list);itemList.add(item4);
 //       ParentItem item5 = new ParentItem("Artist",  list);itemList.add(item5);
@@ -244,14 +249,22 @@ public class HomeFragment extends Fragment implements onChildClicked {
 
     @Override
     public void onChildClicked(ResultsDTO resultsDTO, int position) {
-        Intent intent=new Intent(getContext(),MusicService.class);
-        //intent.putExtra("nalini",resultsDTO.get)
-StartService();
+
+         intent =new Intent(getContext(), MusicService.class);
+        Log.d("nalini",id+"");
+        id=resultsDTO.getPreviewUrl().toString();
+
+        Toast.makeText(getContext(),resultsDTO.getTrackId()+"",Toast.LENGTH_LONG).show();
+        intent.putExtra("nalini",resultsDTO.getPreviewUrl().toString());
+
+
+       getContext().bindService(intent,serviceConnection,BIND_AUTO_CREATE);
     }
-    ImageView imageView;
+    String id;
+    Intent intent;
+
+
     Button play,start,pause,Stop;
-    int id;
-    TextView textView;
     private MusicService musicService;
     private ServiceConnection serviceConnection=new ServiceConnection() {
         @Override
@@ -267,11 +280,6 @@ StartService();
         }
     };
 
-    private void StartService(){
-        Intent intent =new Intent(getContext(), MusicService.class);
-        Log.d("nalini",id+"");
-        intent.putExtra("nalini",id);
-      // bindService(intent,serviceConnection,BIND_AUTO_CREATE);
-    }
+
 
     }

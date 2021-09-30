@@ -2,9 +2,13 @@ package com.example.playmusic;
 
 import android.app.Service;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Binder;
 import android.os.IBinder;
+
+import java.io.IOException;
 
 
 public class MusicService extends Service {
@@ -14,13 +18,24 @@ public class MusicService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        int a= intent.getIntExtra("nalini",0);
-        mediaPlayer=MediaPlayer.create(this,a);
+        String a= intent.getStringExtra("nalini").toString();
+
+         mediaPlayer = new MediaPlayer();
+
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+
+        try {
+            mediaPlayer.setDataSource(a);
+
+            mediaPlayer.prepare();
 
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return new ServiceBinder();
 
-        //  throw new UnsupportedOperationException("Not yet implemented");
+
     }
 
     @Override
@@ -34,21 +49,26 @@ public class MusicService extends Service {
     public void onDestroy() {
         super.onDestroy();
         mediaPlayer.release();
+
     }
+
     public void onPause(){
         if (mediaPlayer.isPlaying()){
-            mediaPlayer.pause();
+            mediaPlayer.stop();
+           // mediaPlayer.release();
+           // mediaPlayer.reset();
         }
     }
     public void onPlay(){
-        if (!mediaPlayer.isPlaying()) {
+       if (!mediaPlayer.isPlaying()) {
 
             mediaPlayer.start();
-        }
+       }
     }
     public void onStop(){
         if (mediaPlayer.isPlaying()) {
-            mediaPlayer.stop();
+
+            //onDestroy();
         }
     }
 
