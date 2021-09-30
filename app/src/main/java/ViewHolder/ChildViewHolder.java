@@ -31,7 +31,7 @@ public class ChildViewHolder extends RecyclerView.ViewHolder {
     public void setData(ResultsDTO resultsDTO) {
         ChildItemTitle.setText(resultsDTO.getTrackName());
         Glide.with(imageView).load((resultsDTO).getPreviewUrl())
-                .placeholder(R.drawable.folderimage)
+                .placeholder(R.drawable.folderimage1)
                 .into(imageView);
         imageView.setOnClickListener(v -> onChildClicked.onChildClicked(resultsDTO,getAdapterPosition()));
 

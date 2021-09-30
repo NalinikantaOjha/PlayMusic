@@ -2,14 +2,15 @@ package Model;
 
 
     public class ChildItem {
-        private int image;
+       // private int image;
+
 
 
         private String ChildItemTitle;
 
         public ChildItem(String childItemTitle) {
             this.ChildItemTitle = childItemTitle;
-            //this.image=image;
+           // this.image=image;
         }
 
 //        public int getImage() {

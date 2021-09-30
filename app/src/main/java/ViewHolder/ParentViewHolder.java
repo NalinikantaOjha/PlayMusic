@@ -30,7 +30,7 @@ public class ParentViewHolder extends RecyclerView.ViewHolder  {
     public void setDataParent(ParentItem parentItem){
         ParentItemTitle.setText(parentItem.getParentItemTitle());
         LinearLayoutManager layoutManager = new LinearLayoutManager(ChildRecyclerView.getContext(), LinearLayoutManager.HORIZONTAL, false);
-        layoutManager.setInitialPrefetchItemCount(parentItem.getChildItemList().size());
+//        layoutManager.setInitialPrefetchItemCount(parentItem.getChildItemList().size());
         ChildRecyclerView.setLayoutManager(layoutManager);
 
 
