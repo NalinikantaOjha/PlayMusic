@@ -3,13 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_home.xml" value="0.1" />
-        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_player.xml" value="0.1" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/custom_controller.xml" value="0.1" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_folder_in_video.xml" value="0.1" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_folders_in_f_videoragment.xml" value="0.1" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_videos_in_video.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/item_file_layout.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/item_folder_layout.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

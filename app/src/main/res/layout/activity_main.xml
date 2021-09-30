@@ -1,36 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/linearLayout"
-    android:background="@drawable/splash">
-    <TextView
-        android:id="@+id/textSplash"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/welcome"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_margin="40dp"
-        android:textColor="@color/white"/>
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="wrap_content"
-        android:layout_height="550dp"
-        app:lottie_rawRes="@raw/music_notes"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"/>
-    <TextView
-        android:id="@+id/textLoading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/loading"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textColor="@color/white"/>
+    android:background="@drawable/musi">
 
 
 </LinearLayout>
