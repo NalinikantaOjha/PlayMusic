@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_baseline_local_movies_24"
+        android:title="@string/videos" />
+    <item
+        android:id="@+id/menu_wish"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/fevourite" />
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/ic_baseline_brightness_low_24"
+        android:title="@string/Setting" />
+
+</menu>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<menu xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--</menu>-->
