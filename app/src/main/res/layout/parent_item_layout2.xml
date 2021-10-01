@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:background="@color/black"
+    android:background="#232029"
+    android:layout_margin="20dp"
     android:layout_height="wrap_content">
 
 
@@ -19,21 +20,19 @@
         />
     <FrameLayout
         android:layout_width="wrap_content"
-        android:background="@color/black"
+        android:background="#232029"
         android:layout_height="wrap_content">
 
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/black"
             android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
             android:layout_marginLeft="12dp"
             >
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:background="@color/black"
                 android:layout_height="wrap_content">
 
 
@@ -47,24 +46,33 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
-                    android:layout_toEndOf="@id/img_your_audios7"
-                    android:padding="12dp"
-                    android:background="@color/black"
                     android:layout_below="@+id/img_your_audios7"
                     android:layout_alignParentStart="true"
-                    android:orientation="vertical"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toEndOf="@id/img_your_audios7"
                     android:layout_toRightOf="@id/img_your_audios7"
-                    android:layout_alignParentLeft="true">
+                    android:background="#232029"
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
 
                     <TextView
-
-                        android:textSize="10dp"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
                         android:text="Album"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+
+                        />
+                    <TextView
+
                         android:layout_width="100dp"
                         android:layout_height="15dp"
-                        android:textStyle="bold"
+                        android:text="12 songs"
                         android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="italic"
 
                         />
                 </LinearLayout>

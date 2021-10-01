@@ -21,11 +21,10 @@
 
 
             <ImageView
-                android:src="@drawable/music"
                 android:id="@+id/img_your_folder"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                />
+                android:src="@drawable/folder" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

@@ -5,6 +5,7 @@ import static android.content.Context.BIND_AUTO_CREATE;
 import android.Manifest;
 import android.content.Intent;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.util.Log;
 
 import android.content.ComponentName;
@@ -62,7 +63,6 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment implements onChildClicked {
     RecyclerView.Adapter<YourAudiosViewHolder>adapterAudios;
      MediaPlayer mediaPlayer;
-    RecyclerView.Adapter<ParentViewHolder>adapter;
 
     RecyclerView.Adapter<RecyclerView.ViewHolder>adapter;
     RecyclerView.Adapter<ChildViewHolder>adapter2;
