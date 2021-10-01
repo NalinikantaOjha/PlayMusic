@@ -20,7 +20,8 @@
             android:layout_height="wrap_content">
 
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
+
                 android:src="@drawable/music"
                 android:id="@+id/img_your_audios5"
                 android:layout_width="120dp"

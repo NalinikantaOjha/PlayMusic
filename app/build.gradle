@@ -33,6 +33,9 @@ android {
 }
 
 dependencies {
+    //dependency for circular view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
     // Retrofit dependency which will be used to make network calls
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     // GSON library which is used to convert POJO to JSON and vice versa
