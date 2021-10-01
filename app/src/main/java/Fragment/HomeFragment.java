@@ -54,7 +54,8 @@ public class HomeFragment extends Fragment implements onChildClicked {
     RecyclerView.Adapter<folderViewHolder>adapter3;
 
     RecyclerView ParentRecyclerViewItem;
-    RecyclerView.LayoutManager manager;
+
+   RecyclerView.LayoutManager manager;
     List<ParentItem>itemList=new ArrayList<>();
     List<ResultsDTO>list=new ArrayList<>();
     List<ResultsDTO>list2=new ArrayList<>();
