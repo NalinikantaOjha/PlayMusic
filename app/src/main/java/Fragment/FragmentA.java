@@ -77,7 +77,7 @@ public class FragmentA extends Fragment implements onItemClicked{
     }
     public void setRecycleview(){
         Adapter adapter=new Adapter(arrayList,this);
-        GridLayoutManager gridLayoutManager=new GridLayoutManager(this.getContext(),2);
+        LinearLayoutManager gridLayoutManager=new LinearLayoutManager(this.getContext());
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
     }

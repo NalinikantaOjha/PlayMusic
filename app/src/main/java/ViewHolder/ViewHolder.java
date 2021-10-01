@@ -13,11 +13,12 @@ import com.example.playmusic.R;
 
 import Interface.onItemClicked;
 import Model.NowShowingModel;
+import Model.ResponseDTO;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
     onItemClicked onItemClicked;
     ImageView imageView;
-    TextView title;
+    TextView title,duration;
     public ViewHolder(@NonNull View itemView, onItemClicked onItemClicked) {
         super(itemView);
         this.onItemClicked=onItemClicked;
@@ -26,8 +27,8 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
     private void initView(View itemView) {
         imageView=itemView.findViewById(R.id.ivImageView);
-
-
+          title=itemView.findViewById(R.id.tvVideoName);
+           duration=itemView.findViewById(R.id.tvDuration);
 
 
     }
@@ -37,6 +38,8 @@ public class ViewHolder extends RecyclerView.ViewHolder {
             Glide.with(imageView).load(responseDTO.getPosterurl())
                     .placeholder(R.drawable.folderimage)
                     .into(imageView);
+            title.setText(responseDTO.getTitle());
+            //duration.setText(responseDTO.get.toString());
         }else {
             imageView.setImageResource(R.drawable.folderimage);
         }

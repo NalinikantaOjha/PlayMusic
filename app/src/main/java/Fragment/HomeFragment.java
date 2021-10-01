@@ -1,7 +1,10 @@
 package Fragment;
 
 import static android.content.Context.BIND_AUTO_CREATE;
+
+import android.Manifest;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.util.Log;
 
 import com.example.playmusic.MusicService;
@@ -31,10 +34,20 @@ import android.widget.Toast;
 
 import com.example.playmusic.MusicService;
 import com.example.playmusic.R;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionDeniedResponse;
+import com.karumi.dexter.listener.PermissionGrantedResponse;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import com.karumi.dexter.listener.single.PermissionListener;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import Activity.PlayMusicActivity;
 import Interface.ApiCall;
 import Interface.Network;
 import Interface.onChildClicked;
@@ -53,7 +66,7 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment implements onChildClicked {
     RecyclerView.Adapter<YourAudiosViewHolder>adapterAudios;
-
+     MediaPlayer mediaPlayer;
     RecyclerView.Adapter<ParentViewHolder>adapter;
     RecyclerView.Adapter<ChildViewHolder>adapter2;
     RecyclerView.Adapter<folderViewHolder>adapter3;
@@ -186,6 +199,21 @@ public class HomeFragment extends Fragment implements onChildClicked {
         ParentBuildData();
         setLayout();
         adapter.notifyDataSetChanged();
+        permission();
+    }
+
+    private void permission() {
+        Dexter.withContext(getContext()).withPermissions(Manifest.permission.RECORD_AUDIO,Manifest.permission.READ_EXTERNAL_STORAGE).withListener(new MultiplePermissionsListener() {
+            @Override
+            public void onPermissionsChecked(MultiplePermissionsReport multiplePermissionsReport) {
+
+            }
+
+            @Override
+            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> list, PermissionToken permissionToken) {
+permissionToken.continuePermissionRequest();
+            }
+        }).check();
     }
 
     private void setLayout() {
@@ -213,7 +241,7 @@ public class HomeFragment extends Fragment implements onChildClicked {
              //adapter2.notifyDataSetChanged();
 
              list2=response.body().getResults();
-            adapterAudios.notifyDataSetChanged();
+      //      adapterAudios.notifyDataSetChanged();
              adapter.notifyDataSetChanged();
              //adapter2.notifyDataSetChanged();
 
@@ -244,9 +272,13 @@ public class HomeFragment extends Fragment implements onChildClicked {
 
     @Override
     public void onChildClicked(ResultsDTO resultsDTO, int position) {
-        Intent intent=new Intent(getContext(),MusicService.class);
-        //intent.putExtra("nalini",resultsDTO.get)
-StartService();
+       startActivity(new Intent(getContext(), PlayMusicActivity.class)
+       .putExtra("songs",resultsDTO.getPreviewUrl())
+               .putExtra("songName",resultsDTO.getTrackName())
+       .putExtra("pos",position));
+//StartService();
+
+
     }
     ImageView imageView;
     Button play,start,pause,Stop;
@@ -273,5 +305,6 @@ StartService();
         intent.putExtra("nalini",id);
       // bindService(intent,serviceConnection,BIND_AUTO_CREATE);
     }
+
 
     }
