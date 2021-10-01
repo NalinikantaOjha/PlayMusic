@@ -50,6 +50,10 @@ Thread updateSeekbar;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_music);
         initView();
+
+        if (mediaPlayer.isPlaying()){
+            mediaPlayer.reset();
+        }
         mediaPlayers();
         seekbarUpdate();
         visualizerUpdate();
@@ -129,6 +133,7 @@ Thread updateSeekbar;
             trackName.setText(track);
             mediaPlayer = MediaPlayer.create(getApplicationContext(), uri);
             mediaPlayer.start();
+
         }
         ivPause.setOnClickListener(new View.OnClickListener() {
             @Override
