@@ -11,13 +11,13 @@ import com.example.playmusic.R;
 
 import Model.ParentItem;
 
-public class ParentViewHolder extends RecyclerView.ViewHolder  {
+public class ParentViewHolder3 extends RecyclerView.ViewHolder {
     public TextView ParentItemTitle;
     public RecyclerView ChildRecyclerView;
     public RecyclerView.LayoutManager manager;
 
 
-    public ParentViewHolder(@NonNull View itemView) {
+    public ParentViewHolder3(@NonNull View itemView) {
         super(itemView);
         initView();
 
@@ -27,10 +27,10 @@ public class ParentViewHolder extends RecyclerView.ViewHolder  {
         ParentItemTitle = itemView.findViewById(R.id.parent_item_title);
         ChildRecyclerView = itemView.findViewById(R.id.child_recyclerview);
     }
-    public void setDataParent(ParentItem parentItem){
+    public void setDataParent3(ParentItem parentItem){
         ParentItemTitle.setText(parentItem.getParentItemTitle());
         LinearLayoutManager layoutManager = new LinearLayoutManager(ChildRecyclerView.getContext(), LinearLayoutManager.HORIZONTAL, false);
-       layoutManager.setInitialPrefetchItemCount(parentItem.getChildItemList().size());
+        layoutManager.setInitialPrefetchItemCount(parentItem.getChildItems().size());
         ChildRecyclerView.setLayoutManager(layoutManager);
 
 
@@ -38,8 +38,4 @@ public class ParentViewHolder extends RecyclerView.ViewHolder  {
 
 
     }
-
-
-
-
 }

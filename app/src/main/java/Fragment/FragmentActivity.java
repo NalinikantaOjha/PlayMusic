@@ -4,11 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.example.playmusic.MusicService;
 import com.example.playmusic.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

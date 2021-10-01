@@ -8,15 +8,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.playmusic.R;
-
+import Interface.onChildClicked;
 import Model.ChildItem;
 
 public class folderViewHolder extends RecyclerView.ViewHolder {
    ImageView Image;
   TextView tille;
-    public folderViewHolder(@NonNull View itemView) {
+  onChildClicked onChildClicked;
+
+    public folderViewHolder(@NonNull View itemView,onChildClicked onChildClicked) {
         super(itemView);
         initView(itemView);
+        this.onChildClicked=onChildClicked;
     }
 
     private void initView(View view) {
@@ -28,5 +31,11 @@ public class folderViewHolder extends RecyclerView.ViewHolder {
     public void setDataFolder(ChildItem childItem){
       //  Image.setImageResource(R.drawable.folderimage);
         tille.setText(childItem.getChildItemTitle());
+        Image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onChildClicked.onFolderClicked(childItem);
+            }
+        });
     }
 }

@@ -15,11 +15,6 @@
             android:name="Activity.VideoActivity"
             android:exported="true" />
 
-        <service
-            android:name=".MusicService"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity
             android:name="Fragment.FragmentActivity"
             android:exported="true" />
