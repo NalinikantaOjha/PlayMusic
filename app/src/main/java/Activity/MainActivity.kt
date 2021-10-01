@@ -13,5 +13,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val intent = Intent(this@MainActivity, FragmentActivity::class.java)
         startActivity(intent)
+        //
     }
 }
