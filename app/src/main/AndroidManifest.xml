@@ -8,7 +8,7 @@
         android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NoTitleBar">
+        android:theme="@style/Theme.PlayMusic">
         <activity
             android:name=".Youtube"
             android:exported="true" />

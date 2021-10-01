@@ -3,14 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:background="#0B0707"
+    android:background="#BA000000"
     android:orientation="vertical"
     tools:context="Fragment.HomeFragment">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Settings"
+        android:textSize="18sp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+/>
    <LinearLayout
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_marginTop="100dp"
+       android:layout_marginTop="40dp"
        android:layout_marginStart="10dp"
        >
 
@@ -18,7 +26,7 @@
         android:id="@+id/Imagehome"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="2dp"
         android:src="@drawable/ic_baseline_home_24" />
 
     <TextView
@@ -43,7 +51,7 @@
             android:id="@+id/ImgSleep"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="2dp"
             android:src="@drawable/ic_baseline_timer_24" />
 
         <TextView
@@ -68,7 +76,7 @@
             android:id="@+id/ImgShare"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="2dp"
             android:src="@drawable/ic_baseline_share_24" />
 
         <TextView
@@ -93,7 +101,7 @@
             android:id="@+id/ImgRate"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="2dp"
             android:src="@drawable/ic_baseline_star_rate_24" />
 
         <TextView
@@ -118,7 +126,7 @@
             android:id="@+id/ImgPrivacy"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="2dp"
             android:src="@drawable/ic_baseline_policy_24" />
 
         <TextView
@@ -135,7 +143,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         >
 
@@ -143,7 +151,7 @@
             android:id="@+id/ImgLanguage"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="2dp"
             android:src="@drawable/ic_baseline_language_24" />
 
         <TextView
