@@ -47,9 +47,63 @@ public class VideoActivity extends AppCompatActivity {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 progressDialog.dismiss();
+                seekBar = findViewById(R.id.seekBar);
+                start = findViewById(R.id.durationStart1);
+                end = findViewById(R.id.durationEnd1);
+                String endTime = createTime(mp.getDuration());
+                end.setText(endTime);
+                   start.setText(createTime(mp.getCurrentPosition()));
+
+                final Handler handler = new Handler();
+                final int delay = 1000;
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                      //  start.setText(createTime(mp.getCurrentPosition()));
+                        handler.postDelayed(this, delay);
+                    }
+                }, delay);
+
+                updateSeekbar = new Thread() {
+                    @Override
+                    public void run() {
+                        int totalDuration =mp.getDuration();
+                        int currPosition = 0;
+                        while (currPosition < totalDuration) {
+                            try {
+                                sleep(500);
+                                currPosition = mp.getCurrentPosition();
+                                seekBar.setProgress(mp.getCurrentPosition());
+                            } catch (InterruptedException | IllegalStateException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        super.run();
+                    }
+                };
+                seekBar.setMax(mp.getDuration());
+                updateSeekbar.start();
+                seekBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.black), PorterDuff.Mode.MULTIPLY);
+                seekBar.getThumb().setColorFilter(getResources().getColor(R.color.black), PorterDuff.Mode.SRC_IN);
+                seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        mp.seekTo(seekBar.getProgress());
+                    }
+                });
+
             }
         });
-
 
         ivPause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,60 +128,8 @@ public class VideoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        seekBar = findViewById(R.id.seekBar);
-        start = findViewById(R.id.durationStart);
-        end = findViewById(R.id.durationEnd);
-        updateSeekbar = new Thread() {
-            @Override
-            public void run() {
-                int totalDuration = videoView.getDuration();
-                int currPosition = 0;
-                while (currPosition < totalDuration) {
-                    try {
-                        sleep(500);
-                        currPosition = videoView.getCurrentPosition();
-                        seekBar.setProgress(currPosition);
-                    } catch (InterruptedException | IllegalStateException e) {
-                        e.printStackTrace();
-                    }
-                }
-                super.run();
-            }
-        };
-        seekBar.setMax(videoView.getDuration());
-        updateSeekbar.start();
-        seekBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.black), PorterDuff.Mode.MULTIPLY);
-        seekBar.getThumb().setColorFilter(getResources().getColor(R.color.black), PorterDuff.Mode.SRC_IN);
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
 
-            }
 
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                videoView.seekTo(seekBar.getProgress());
-            }
-        });
-
-        String endTime = createTime(videoView.getDuration());
-        end.setText(endTime);
-
-        final Handler handler = new Handler();
-        final int delay = 1000;
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                String currTime = createTime(videoView.getCurrentPosition());
-                start.setText(currTime);
-                handler.postDelayed(this, delay);
-            }
-        }, delay);
     }
 
     private void getDataFromIntent() {

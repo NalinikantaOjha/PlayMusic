@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/durationStart"
+        android:id="@+id/durationStart1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -55,7 +55,7 @@
         app:layout_constraintVertical_bias="0.982" />
 
     <TextView
-        android:id="@+id/durationEnd"
+        android:id="@+id/durationEnd1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="311dp"
@@ -64,7 +64,7 @@
         android:text="03.40"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/durationStart" />
+        app:layout_constraintStart_toEndOf="@+id/durationStart1" />
 
     <ImageView
         android:id="@+id/ivPrevious"
@@ -75,7 +75,7 @@
         android:layout_marginBottom="68dp"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toStartOf="@+id/ivreplay"
-        app:layout_constraintStart_toEndOf="@+id/durationStart"
+        app:layout_constraintStart_toEndOf="@+id/durationStart1"
         app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
 
     <ImageView
