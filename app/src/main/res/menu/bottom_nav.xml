@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"
+        android:id = "@+id/home"/>
+    <item
+        android:icon="@drawable/ic_baseline_video_call_24"
+        android:title="Videos"
+        android:id = "@+id/Videos"/>
+    <item
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="Favourite"
+        android:id = "@+id/Favourite"/>
+    <item
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings"
+        android:id = "@+id/Settings"/>
+
+
+</menu>
