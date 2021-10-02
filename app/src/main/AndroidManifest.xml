@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.playmusic">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -15,12 +16,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlayMusic">
         <activity
+            android:name="Activity.creationFolder"
+            android:exported="true" />
+        <activity
+            android:name="Activity.screenshotsFolder"
+            android:exported="true" />
+        <activity
+            android:name="Activity.cameraFolder"
+            android:exported="true" />
+        <activity
+            android:name="Activity.whatsappFolder"
+            android:exported="true" />
+        <activity
+            android:name="Activity.downloadFolder"
+            android:exported="true" />
+        <activity
             android:name="Activity.PlayMusicActivity"
             android:exported="true" />
         <activity
             android:name="Activity.VideoActivity"
             android:exported="true" />
-
         <activity
             android:name="Fragment.FragmentActivity"
             android:exported="true" />
