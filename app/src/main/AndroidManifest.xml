@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlayMusic">
         <activity
+            android:name="Activity.MusicListActivity"
+            android:exported="true" />
+        <activity
             android:name="Activity.creationFolder"
             android:exported="true" />
         <activity

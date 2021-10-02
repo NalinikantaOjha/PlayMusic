@@ -6,8 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
+
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,7 +36,7 @@ import retrofit2.Response;
 
 
 public class FragmentA extends Fragment implements onItemClicked{
-    NavController navController;
+
 
         RecyclerView recyclerView;
     TextView textView;
