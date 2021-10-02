@@ -3,27 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_home.xml" value="0.1" />
-        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/drawable/ic_baseline_arrow_back_ios_new_24.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/drawable/ic_baseline_circle_24.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.22962962962962963" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/drawable/ic_baseline_timer_24.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_fragment.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_main3.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_play_music.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_player.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/activity_video.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/child_item.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/custom_controller.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_a.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_b.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_fevorite.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_folder_in_video.xml" value="0.1" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_folders_in_f_videoragment.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_home.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_setting.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_videos.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/fragment_videos_in_video.xml" value="0.1" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_kotlin_video.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_video.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/child_item.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_a.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_home.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_videos.xml" value="0.16847826086956522" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/item_layout.xml" value="0.17481884057971014" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/item_layout_folder.xml" value="0.24592391304347827" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/item_your_audios.xml" value="0.25" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/parent_item.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/parent_item_four.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/parent_item_layout2.xml" value="0.1" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/parent_item_three.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/parent_item_two.xml" value="0.1" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/item_file_layout.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/item_folder_layout.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/item_layout.xml" value="0.264" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/item_layout_folder.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/item_your_audios.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/parent_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/parent_item_layout2.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_music_list.xml" value="0.24094202898550723" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/item_your_audios.xml" value="0.12360688956433637" />
       </map>
     </option>
   </component>

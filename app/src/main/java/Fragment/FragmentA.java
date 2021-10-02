@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,6 +37,7 @@ import retrofit2.Response;
 
 public class FragmentA extends Fragment implements onItemClicked{
 
+
         RecyclerView recyclerView;
     TextView textView;
     List<NowShowingModel> arrayList = new ArrayList<>();
@@ -48,6 +51,7 @@ public class FragmentA extends Fragment implements onItemClicked{
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+       // navController= Navigation.findNavController(view);
         initView(view);
     }
         private void initView(View view) {
@@ -77,7 +81,7 @@ public class FragmentA extends Fragment implements onItemClicked{
     }
     public void setRecycleview(){
         Adapter adapter=new Adapter(arrayList,this);
-        GridLayoutManager gridLayoutManager=new GridLayoutManager(this.getContext(),2);
+        LinearLayoutManager gridLayoutManager=new LinearLayoutManager(this.getContext());
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
     }
@@ -85,6 +89,10 @@ public class FragmentA extends Fragment implements onItemClicked{
     @Override
     public void onItemClicked(NowShowingModel nowShowingDTO, int position) {
        Model model=new Model(nowShowingDTO.getVideoUrl());
+//       Bundle bundle=new Bundle();
+//       bundle.putString("model",model.getUrl());
+//        navController.navigate(R.id.action_fragmentA_to_playVideoFragment,bundle);
+
         Intent intent =new Intent(getContext(), VideoActivity.class);
         intent.putExtra("model",model);
         startActivity(intent);
