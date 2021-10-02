@@ -4,12 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.media.audiofx.Visualizer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,16 +19,12 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.example.playmusic.R;
-import com.gauravk.audiovisualizer.visualizer.BarVisualizer;
-import com.gauravk.audiovisualizer.visualizer.BlastVisualizer;
 import com.gauravk.audiovisualizer.visualizer.CircleLineVisualizer;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import Fragment.FragmentActivity;
-import Fragment.HomeFragment;
 
 public class PlayMusicActivity extends AppCompatActivity {
     ImageView ivBack, ivShare, ivImgLogo, ivFavorite, ivAddToPlayList, ivAttributes, ivTimer, ivShuffle, ivPrevious, ivNext, ivPlaList, ivPlay, ivPause;
@@ -191,7 +184,7 @@ Thread updateSeekbar;
         ivShuffle = findViewById(R.id.ivShuffle);
         ivPrevious = findViewById(R.id.ivPrevious);
         ivNext = findViewById(R.id.ivNext);
-        ivPause = findViewById(R.id.Pause);
+        ivPause = findViewById(R.id.PauseVideo);
 //        ivPlay=findViewById(R.id.Play);
         trackName = findViewById(R.id.trackName);
         start = findViewById(R.id.durationStart);

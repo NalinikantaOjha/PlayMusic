@@ -1,21 +1,18 @@
-package Fragment;
-
-import android.content.Intent;
-import android.os.Bundle;
+package Activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.playmusic.R;
@@ -23,10 +20,9 @@ import com.example.playmusic.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import Activity.VideoActivity;
-import Interface.onItemClicked;
 import Interface.ApiCall2;
 import Interface.Network2;
+import Interface.onItemClicked;
 import Model.Model;
 import Model.NowShowingModel;
 import Model.ResponseModel;
@@ -34,31 +30,22 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
-public class FragmentA extends Fragment implements onItemClicked{
-    NavController navController;
-
-        RecyclerView recyclerView;
+public class downloadFolder extends AppCompatActivity implements onItemClicked {
+    RecyclerView recyclerView;
     TextView textView;
+
     List<NowShowingModel> arrayList = new ArrayList<>();
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a, container, false);
-    }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-       // navController= Navigation.findNavController(view);
-        initView(view);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_download_folder);
+        initView();
     }
-        private void initView(View view) {
 
-        recyclerView = view.findViewById(R.id.RecycleView1);
+    private void initView() {
 
-
+        recyclerView = findViewById(R.id.RecycleView11);
         callApi();
     }
 
@@ -67,8 +54,8 @@ public class FragmentA extends Fragment implements onItemClicked{
         apiCall2.getUser().enqueue(new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
-                if (response.body()!=null){
-                    arrayList=response.body().getNowShowing();
+                if (response.body() != null) {
+                    arrayList = response.body().getNowShowing();
                     setRecycleview();
                 }
             }
@@ -79,22 +66,22 @@ public class FragmentA extends Fragment implements onItemClicked{
             }
         });
     }
-    public void setRecycleview(){
-        Adapter adapter=new Adapter(arrayList,this);
-        LinearLayoutManager gridLayoutManager=new LinearLayoutManager(this.getContext());
+
+    public void setRecycleview() {
+        Adapter adapter = new Adapter(arrayList,this);
+        LinearLayoutManager gridLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
     }
 
-    @Override
     public void onItemClicked(NowShowingModel nowShowingDTO, int position) {
-       Model model=new Model(nowShowingDTO.getVideoUrl());
+        Model model = new Model(nowShowingDTO.getVideoUrl());
 //       Bundle bundle=new Bundle();
 //       bundle.putString("model",model.getUrl());
 //        navController.navigate(R.id.action_fragmentA_to_playVideoFragment,bundle);
 
-        Intent intent =new Intent(getContext(), VideoActivity.class);
-        intent.putExtra("model",model);
+        Intent intent = new Intent(getBaseContext(), VideoActivity.class);
+        intent.putExtra("model", model);
         startActivity(intent);
 
     }
