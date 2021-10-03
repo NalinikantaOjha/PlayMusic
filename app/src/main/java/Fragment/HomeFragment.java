@@ -76,7 +76,7 @@ public class HomeFragment extends Fragment implements onChildClicked {
     List<ResultsDTO>list=new ArrayList<>();
     List<ResultsDTO>list2=new ArrayList<>();
   //  List<ChildItem>childItems=new ArrayList<>();
-////
+//////
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
