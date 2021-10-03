@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="40dp"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="#424242"
     tools:context=".SleepDialog">
 
 <RadioGroup
@@ -19,7 +18,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="Turn off the sleep Timer"
         android:textSize="22sp"/>
     <RadioButton
@@ -27,31 +26,31 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="10 Minutes"
         android:textSize="22sp"/>
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="20 Minutes"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="22sp"/>
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="30 Minutes"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="22sp"/>
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="40 Minutes"
         android:textSize="22sp"/>
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="60 Minutes"
         android:textSize="22sp"/>
 </RadioGroup>

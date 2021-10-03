@@ -3,9 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BA000000"
+    android:background="#232029"
     android:orientation="vertical"
     tools:context="Fragment.HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,33 +19,34 @@
         android:layout_marginLeft="3dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
-/>
-   <LinearLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="40dp"
-       android:layout_marginStart="10dp"
-       >
-
-    <ImageView
+        />
+    <LinearLayout
         android:id="@+id/Imagehome"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="2dp"
-        android:src="@drawable/ic_baseline_home_24" />
-
-    <TextView
-        android:id="@+id/tvHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="3dp"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        android:text="Home" />
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:src="@drawable/ic_baseline_home_24" />
+
+        <TextView
+            android:id="@+id/tvHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:text="Home" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/ImgSleep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -48,7 +54,6 @@
         >
 
         <ImageView
-            android:id="@+id/ImgSleep"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="2dp"
@@ -66,6 +71,7 @@
             android:text="Sleep Timer" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/ImgShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -73,7 +79,6 @@
         >
 
         <ImageView
-            android:id="@+id/ImgShare"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="2dp"
@@ -91,6 +96,7 @@
             android:text="Share" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/ImgRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -98,7 +104,6 @@
         >
 
         <ImageView
-            android:id="@+id/ImgRate"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="2dp"
@@ -116,6 +121,7 @@
             android:text="Rate us" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/ImgPrivacy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -123,7 +129,6 @@
         >
 
         <ImageView
-            android:id="@+id/ImgPrivacy"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="2dp"
@@ -141,14 +146,14 @@
             android:text="Privacy Policy" />
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/ImgLanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
         >
 
         <ImageView
-            android:id="@+id/ImgLanguage"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="2dp"
@@ -166,3 +171,4 @@
             android:text="Language" />
     </LinearLayout>
     </LinearLayout>
+</LinearLayout>

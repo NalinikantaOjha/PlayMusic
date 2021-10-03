@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,10 +25,8 @@ import com.example.playmusic.SleepDialog;
 
 
 public class SettingsFragment extends Fragment {
-    private ImageView share;
-    private ImageView Sleep;
-    private ImageView Home;
-   private NavController navController;
+    private LinearLayout share,Sleep,Home;
+    private NavController navController;
 
 
     @Override
@@ -40,14 +39,14 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-  /****      NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.nav_host_fragment);
-        NavController navCo = navHostFragment.getNavController();
-        //   navController SupportFragmentManager.Navigation.findNavController(view);
+        /****      NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
+         .findFragmentById(R.id.nav_host_fragment);
+         NavController navCo = navHostFragment.getNavController();
+         //   navController SupportFragmentManager.Navigation.findNavController(view);
          if (navController == null) {
          throw new IllegalStateException("View " + view + " does not have a NavController set");
          }
-******/
+         ******/
         share = view.findViewById(R.id.ImgShare);
 
         share.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +80,7 @@ public class SettingsFragment extends Fragment {
     }
 
     private void GotoHome(View view) {
-        Intent intent = new Intent(getActivity(), MainActivity.class);
+        Intent intent = new Intent(getActivity(), FragmentActivity.class);
         startActivity(intent);
     }
 
