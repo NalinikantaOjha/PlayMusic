@@ -320,8 +320,10 @@ permissionToken.continuePermissionRequest();
     public void onChildClicked(ResultsDTO resultsDTO, int position) {
        startActivity(new Intent(getContext(), PlayMusicActivity.class)
        .putExtra("songs",resultsDTO.getPreviewUrl())
+               .putExtra("imageUrl",resultsDTO.getArtworkUrl100())
                .putExtra("songName",resultsDTO.getTrackName())
        .putExtra("pos",position));
+
 //StartService();
 
 

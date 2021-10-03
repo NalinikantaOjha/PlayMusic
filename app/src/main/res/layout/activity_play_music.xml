@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/ic_baseline_share_24" />
 
     <ImageView
-        android:id="@+id/ivAddToPlayList"
+        android:id="@+id/ivAddToPlayList5"
         android:layout_width="35dp"
         android:layout_height="33dp"
         android:layout_marginStart="72dp"
@@ -53,7 +53,7 @@
         android:layout_marginTop="78dp"
         android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toStartOf="@+id/ivTimer"
-        app:layout_constraintStart_toEndOf="@+id/ivAddToPlayList"
+        app:layout_constraintStart_toEndOf="@+id/ivAddToPlayList5"
         app:layout_constraintTop_toBottomOf="@+id/ivImagLogo"
         app:srcCompat="@drawable/ic_baseline_insert_chart_outlined_24" />
 
@@ -64,7 +64,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="352dp"
         android:layout_marginEnd="64dp"
-        app:layout_constraintEnd_toStartOf="@+id/ivAddToPlayList"
+        app:layout_constraintEnd_toStartOf="@+id/ivAddToPlayList5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivBack"
         app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
@@ -166,7 +166,7 @@
         android:layout_marginBottom="78dp"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintStart_toEndOf="@+id/ivShuffle"
-        app:layout_constraintTop_toBottomOf="@+id/ivAddToPlayList"
+        app:layout_constraintTop_toBottomOf="@+id/ivAddToPlayList5"
         app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
 
     <ImageView
@@ -216,7 +216,7 @@
         app:avDensity=".4"
         app:avSpeed="normal"
         app:avType="fill"
-        app:layout_constraintBottom_toTopOf="@+id/ivAddToPlayList"
+        app:layout_constraintBottom_toTopOf="@+id/ivAddToPlayList5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"

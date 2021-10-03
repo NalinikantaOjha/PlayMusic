@@ -1,14 +1,38 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BA000000"
+    android:orientation="vertical"
     tools:context="Fragment.FavouritesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:textSize="30dp"
+        android:text="Favourite"
+        android:id="@+id/textF"
+        android:layout_height="wrap_content">
+
+
+    </TextView>
+    <ImageView
+        android:layout_width="1dp"
+        android:id="@+id/nalini"
+        android:layout_height="1dp">
+
+    </ImageView>
+    <TextView
+        android:layout_width="1dp"
+        android:id="@+id/kantatext"
+        android:layout_height="1dp">
+
+    </TextView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
+        android:id="@+id/addRecycleView"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+</LinearLayout>

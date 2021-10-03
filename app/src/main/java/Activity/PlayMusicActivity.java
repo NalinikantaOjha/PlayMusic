@@ -17,21 +17,28 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.playmusic.R;
 import com.gauravk.audiovisualizer.visualizer.CircleLineVisualizer;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.File;
 import java.util.ArrayList;
 
 import Fragment.FragmentActivity;
+import Model.AddList;
 
 public class PlayMusicActivity extends AppCompatActivity {
     ImageView ivBack, ivShare, ivImgLogo, ivFavorite, ivAddToPlayList, ivAttributes, ivTimer, ivShuffle, ivPrevious, ivNext, ivPlaList, ivPlay, ivPause;
     TextView trackName, start, end;
     SeekBar seekBar;
     CircleLineVisualizer visualizer;
-
+String Url;
+String imageUrl;
+FirebaseDatabase database= FirebaseDatabase.getInstance();
+String track;
     String songName;
     public static final String EXTRA_NAME = "song_name";
     static MediaPlayer mediaPlayer = new MediaPlayer();
@@ -50,6 +57,22 @@ Thread updateSeekbar;
         mediaPlayers();
         seekbarUpdate();
         visualizerUpdate();
+      //  trackName.setText();
+        ivAddToPlayList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                 DatabaseReference myRef = database.getReference("parent"+position+"");
+                //DatabaseReference myRef=database.getReference("parent");
+
+
+                AddList student = new AddList(imageUrl.toString(),track.toString());
+                myRef.setValue(student);
+                Toast.makeText(PlayMusicActivity.this, "dfghjkl", Toast.LENGTH_LONG).show();
+                Toast.makeText(PlayMusicActivity.this, position + "", Toast.LENGTH_LONG).show();
+
+            }
+        });
     }
 
     private void visualizerUpdate() {
@@ -116,12 +139,13 @@ Thread updateSeekbar;
     private void mediaPlayers() {
         if (mediaPlayer != null) {
             Intent intent = getIntent();
-            String url = intent.getStringExtra("songs");
-            String track = intent.getStringExtra("songName");
-
+            Url = intent.getStringExtra("songs");
+            track = intent.getStringExtra("songName");
+            position=intent.getIntExtra("pos",0);
+imageUrl=intent.getStringExtra("imageUrl");
             String sName = intent.getStringExtra("songName");
 
-            Uri uri = Uri.parse(url);
+            Uri uri = Uri.parse(Url);
 
             trackName.setText(track);
             mediaPlayer = MediaPlayer.create(getApplicationContext(), uri);
@@ -178,7 +202,7 @@ Thread updateSeekbar;
         ivShare = findViewById(R.id.ivShare);
         ivImgLogo = findViewById(R.id.ivImagLogo);
         ivFavorite = findViewById(R.id.ivFavorite);
-        ivAddToPlayList = findViewById(R.id.ivAddToPlayList);
+        ivAddToPlayList = findViewById(R.id.ivAddToPlayList5);
         ivAttributes = findViewById(R.id.ivAttributes);
         ivTimer = findViewById(R.id.ivTimer);
         ivShuffle = findViewById(R.id.ivShuffle);

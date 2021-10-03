@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 intent();
             }
-        },5000);
+        },3000);
 
     }
     private void intent(){

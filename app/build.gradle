@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    // for firebase
+
+    id  'com.google.gms.google-services'
     id 'kotlin-android-extensions'
 }
 
@@ -83,7 +86,9 @@ dependencies {
     implementation 'com.karumi:dexter:6.2.3'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     //def nav_version = "2.3.4"
-
+    implementation platform('com.google.firebase:firebase-bom:28.4.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-database'
 //    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     //implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
