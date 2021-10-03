@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlayMusic">
         <activity
-            android:name=".Youtube"
-            android:exported="true" />
-        <activity
             android:name=".SleepDialog"
             android:exported="true" />
         <activity
