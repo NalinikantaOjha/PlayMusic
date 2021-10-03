@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "773662326523",
+    "project_id": "playmusic-6e248",
+    "storage_bucket": "playmusic-6e248.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773662326523:android:682c66603cebd6ecddba5e",
+        "android_client_info": {
+          "package_name": "com.example.playmusic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773662326523-210p6gnluveik23j48bl7jfi5ge5gvda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8eC_n4oD8o8ff2B8QSAaUM12G0ioz-EE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773662326523-210p6gnluveik23j48bl7jfi5ge5gvda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
