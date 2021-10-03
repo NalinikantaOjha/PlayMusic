@@ -13,16 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.SearchView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import Fragment.FavouritesFragment;
-import Fragment.HomeFragment;
-import Fragment.SettingsFragment;
-import Fragment.VideosFragment;
-
-public class MainActivity extends AppCompatActivity {
-    private EditText searchView;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -34,13 +25,41 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import Fragment.FragmentActivity;
 
+import Fragment.FavouritesFragment;
+import Fragment.HomeFragment;
+import Fragment.SettingsFragment;
+import Fragment.VideosFragment;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText searchView;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                intent();
+            }
+        },5000);
+
+    }
+    private void intent(){
+        Intent intent=new Intent(MainActivity.this, FragmentActivity.class);
+        startActivity(intent);
+    }
+
+
+
+
+}
+       /* setContentView(R.layout.activity_main2);
         searchView = findViewById(R.id.SearchBar);
         Searchbar();
     //    HomeFragment blankFragment = new HomeFragment();
@@ -95,4 +114,4 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             };
-    }
+    }*/

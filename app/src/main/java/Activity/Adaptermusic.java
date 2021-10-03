@@ -18,7 +18,7 @@ import  Interface.onChildClicked;
 import Model.ResultsDTO;
 import ViewHolder.YourAudiosViewHolder;
 
-public class Adaptermusic extends RecyclerView.Adapter<YourAudiosViewHolder> {
+public class Adaptermusic extends RecyclerView.Adapter<ViewHolderPlay> {
     List<ResultsDTO> list=new ArrayList();
     onChildClicked onChildClicked;
 
@@ -29,15 +29,15 @@ public class Adaptermusic extends RecyclerView.Adapter<YourAudiosViewHolder> {
 
     @NonNull
     @Override
-    public YourAudiosViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view1= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_your_audios,parent,false);
-        return new YourAudiosViewHolder(view1, onChildClicked);
+    public ViewHolderPlay onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view1= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout,parent,false);
+        return new ViewHolderPlay(view1, onChildClicked);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull YourAudiosViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolderPlay holder, int position) {
         ResultsDTO resultsDTO=list.get(position);
-        holder.setData2(resultsDTO);
+        holder.setData5(resultsDTO);
 
     }
 

@@ -39,6 +39,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import Activity.MusicListActivity;
 import Activity.PlayMusicActivity;
 import Interface.ApiCall;
 import Interface.Network;
@@ -331,6 +332,8 @@ permissionToken.continuePermissionRequest();
 
     @Override
     public void onFolderClicked(ChildItem childItem) {
+        Intent intent=new Intent(getContext(), MusicListActivity.class);
+        startActivity(intent);
         Toast.makeText(getContext(),childItem.getChildItemTitle(),Toast.LENGTH_LONG).show();
 
     }

@@ -32,41 +32,14 @@
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/item_your_audios.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/parent_item.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ARYA DEVI/Documents/PlayMusic/app/src/main/res/layout/parent_item_layout2.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_fragment.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_main2.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_music_list.xml" value="0.24094202898550723" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_home.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_videos.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/item_layout.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/item_your_audios.xml" value="0.12360688956433637" />
-      </map>
-    </option>
-  </component>
-  <component name="DesignSurface">
-    <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_language_24.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_policy_24.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_timer_24.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_baseline_video_call_24.xml" value="0.12777777777777777" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/ic_launcher_background.xml" value="0.13518518518518519" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/icon_color.xml" value="0.1" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/search_layout.xml" value="0.1037037037037037" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/selector.xml" value="0.13148148148148148" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/drawable/shape.xml" value="0.1" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_main.xml" value="0.11730072463768115" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_main2.xml" value="0.22" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_sleep_dialog.xml" value="0.1" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/activity_youtube.xml" value="0.1" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_favourites.xml" value="0.1" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_home.xml" value="0.11141304347826086" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_sleep.xml" value="0.1" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/layout/fragment_videos.xml" value="0.1" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/menu/bottom_nav.xml" value="0.17395833333333333" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/menu/menu.xml" value="0.17395833333333333" />
-        <entry key="..\:/Users/nimit/AndroidStudioProjects/PlayMusic/app/src/main/res/xml/search_layout.xml" value="0.1" />
+        <entry key="..\:/Users/nalin/AndroidStudioProjects/PlayMusic/app/src/main/res/menu/menu_navigationtop.xml" value="0.13020833333333334" />
       </map>
     </option>
   </component>

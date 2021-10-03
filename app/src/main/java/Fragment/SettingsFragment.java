@@ -66,24 +66,24 @@ public class SettingsFragment extends Fragment {
         Sleep(view);
 
 
-    Home =view.findViewById(R.id.Imagehome);
-   Home.setOnClickListener(new View.OnClickListener()
+        Home =view.findViewById(R.id.Imagehome);
+        Home.setOnClickListener(new View.OnClickListener()
 
-    {
-        @Override
-        public void onClick (View v){
+        {
+            @Override
+            public void onClick (View v){
 
-        GotoHome(view);
+                GotoHome(view);
+            }
+        });
+
+
     }
-    });
 
-
-}
-
-  private void GotoHome(View view) {
-     Intent intent = new Intent(getActivity(), MainActivity.class);
-     startActivity(intent);
-   }
+    private void GotoHome(View view) {
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        startActivity(intent);
+    }
 
     private void Sleep(View view) {
         Sleep = view.findViewById(R.id.ImgSleep);
