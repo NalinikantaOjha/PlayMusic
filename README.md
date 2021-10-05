@@ -23,7 +23,7 @@ I can’t thank Arya Devi V and Nimit Agarwal enough, who worked hard for this p
 
 Arya Devi V was responsible for  Video Fragment, API calls, Music and Video Player Activities, integrating the blog with our app.
 Nimit was responsible for the settings page, bottom Navigation and the search box. These works improve app functionalities.
-In the mean time, I handled the  the Home Fragment and Favourite Fragment. He took care of all recycler view, firebase, and Retrofit things such as making the pages that took user experience to the next level. He used to merge all our codes at night and was tracking the progress of us all.
+In the mean time, I handled the  the Home Fragment and Favourite Fragment. I took care of all recycler view, firebase, and Retrofit things such as making the pages that took user experience to the next level. I used to merge all our codes at night and was tracking the progress of us all.
 Though this project was not a piece of cake. I loved to work with these amazing guys during this 5 days journey we got lots of learnings and got a broader perspective about the application lifecycle.
 
 
