@@ -1,11 +1,5 @@
 # Music Player
-
  Blog Link 🔗 https://medium.com/@aryadevivdevu/the-journey-of-making-music-player-android-app-c82d0dd63175
- ##
- ##
- 
- !
-
 ## The Journey of making Play Music Android App
 
 Hello there, I am Nalinikanta an Aspiring Android Developer learning at Masai School. You might have used the Play Music Android App, which is India’s first hyper-local music platform that enables an good user experience.
